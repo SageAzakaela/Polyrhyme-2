@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bvi6ovbgktpuu"]
 
 [ext_resource type="Script" path="res://Scripts/Main_updated.gd" id="1_npe1d"]
-[ext_resource type="AudioStream" uid="uid://dgoykrlemcvk0" path="res://MusicAssets/Losin My Cool - 125 BPM - Azakaela.mp3" id="2_jjeiu"]
+[ext_resource type="AudioStream" uid="uid://dat5b22ptnhyv" path="res://python/Icicles_AzakaelasRemix_Mix2.wav" id="2_xg7x4"]
 [ext_resource type="Texture2D" uid="uid://xv73iswtxltc" path="res://Textures/Diamond.png" id="3_amt1f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e3lic"]
@@ -9,10 +9,11 @@ radius = 42.6667
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_npe1d")
-bpm = 125.0
+song_name = "Icicles"
+bpm = 105.0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_jjeiu")
+stream = ExtResource("2_xg7x4")
 
 [node name="Diamond1" type="Sprite2D" parent="."]
 modulate = Color(1, 0, 0, 1)

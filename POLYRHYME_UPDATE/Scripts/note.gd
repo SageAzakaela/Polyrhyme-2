@@ -8,7 +8,7 @@ var time: float = 0.0  # The time when the note should be hit
 var start_y: float = -1000.0  # Initial Y position of the note
 var start_time: float = 0.0  # Time at which the note starts moving
 var total_time: float = 0.0  # Total time from start to hit
-var early_spawn_offset: float = 0.85  # Spawn the note this many seconds earlier
+var early_spawn_offset: float = 0.0  # Spawn the note this many seconds earlier
 
 func set_note_data(data: Dictionary):
 	note_data = data

@@ -19,7 +19,7 @@ extends Node2D
 @onready var diamond_8 = $Diamond8
 
 @export var bpm: float = 120.0  # BPM of the song
-@export var offset: float = .8
+@export var offset: float = 2
 
 @export var JSON_PATH: String = ""
 
@@ -40,7 +40,7 @@ func _ready():
 	song_data = obj.get_data()
 
 	time_per_16th_note = 60.0 / (bpm * 4)  # Calculate the duration of one 16th note
-
+	spawn_notes()
 	$Music.play()
 	song_started = true
 
