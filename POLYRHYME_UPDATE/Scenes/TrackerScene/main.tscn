@@ -1,0 +1,161 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvi6ovbgktpuu"]
+
+[ext_resource type="Script" path="res://Scripts/Main_updated.gd" id="1_npe1d"]
+[ext_resource type="AudioStream" uid="uid://dgoykrlemcvk0" path="res://MusicAssets/Losin My Cool - 125 BPM - Azakaela.mp3" id="2_jjeiu"]
+[ext_resource type="Texture2D" uid="uid://xv73iswtxltc" path="res://Textures/Diamond.png" id="3_amt1f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e3lic"]
+radius = 42.6667
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_npe1d")
+bpm = 125.0
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_jjeiu")
+
+[node name="Diamond1" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(285, 981)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_amt1f")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="Diamond1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Diamond1/Area2D"]
+shape = SubResource("CircleShape2D_e3lic")
+
+[node name="Diamond2" type="Sprite2D" parent="."]
+modulate = Color(1, 0.545098, 0, 1)
+position = Vector2(477, 981)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_amt1f")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="Diamond2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Diamond2/Area2D"]
+shape = SubResource("CircleShape2D_e3lic")
+
+[node name="Diamond3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(669, 981)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_amt1f")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="Diamond3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Diamond3/Area2D"]
+shape = SubResource("CircleShape2D_e3lic")
+
+[node name="Diamond4" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(861, 981)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_amt1f")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="Diamond4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Diamond4/Area2D"]
+shape = SubResource("CircleShape2D_e3lic")
+
+[node name="Diamond5" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 1, 1)
+position = Vector2(1053, 981)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_amt1f")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="Diamond5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Diamond5/Area2D"]
+shape = SubResource("CircleShape2D_e3lic")
+
+[node name="Diamond6" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(1245, 981)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_amt1f")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="Diamond6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Diamond6/Area2D"]
+shape = SubResource("CircleShape2D_e3lic")
+
+[node name="Diamond7" type="Sprite2D" parent="."]
+modulate = Color(0.560784, 0, 1, 1)
+position = Vector2(1437, 981)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_amt1f")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="Diamond7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Diamond7/Area2D"]
+shape = SubResource("CircleShape2D_e3lic")
+
+[node name="Diamond8" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(1629, 981)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_amt1f")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="Diamond8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Diamond8/Area2D"]
+shape = SubResource("CircleShape2D_e3lic")
+
+[node name="Spawner1" type="Node2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(280, 16)
+scale = Vector2(0.75, 0.75)
+metadata/_edit_group_ = true
+
+[node name="Spawner2" type="Node2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(472, 16)
+scale = Vector2(0.75, 0.75)
+metadata/_edit_group_ = true
+
+[node name="Spawner3" type="Node2D" parent="."]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(664, 16)
+scale = Vector2(0.75, 0.75)
+metadata/_edit_group_ = true
+
+[node name="Spawner4" type="Node2D" parent="."]
+modulate = Color(0, 1, 1, 1)
+position = Vector2(856, 16)
+scale = Vector2(0.75, 0.75)
+metadata/_edit_group_ = true
+
+[node name="Spawner5" type="Node2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(1056, 16)
+scale = Vector2(0.75, 0.75)
+metadata/_edit_group_ = true
+
+[node name="Spawner6" type="Node2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(1248, 16)
+scale = Vector2(0.75, 0.75)
+metadata/_edit_group_ = true
+
+[node name="Spawner7" type="Node2D" parent="."]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(1440, 16)
+scale = Vector2(0.75, 0.75)
+metadata/_edit_group_ = true
+
+[node name="Spawner8" type="Node2D" parent="."]
+modulate = Color(0, 1, 1, 1)
+position = Vector2(1632, 16)
+scale = Vector2(0.75, 0.75)
+metadata/_edit_group_ = true
+
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
