@@ -1,0 +1,165 @@
+[gd_scene load_steps=11 format=3 uid="uid://irdvgmmafflc"]
+
+[ext_resource type="Script" path="res://MeasureRow.gd" id="1_bvy1u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d55pe"]
+bg_color = Color(0.270588, 0.270588, 0.270588, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 4
+shadow_offset = Vector2(4, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8sv7"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xcx6"]
+bg_color = Color(1, 0.498039, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtjie"]
+bg_color = Color(1, 1, 0.6, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hci3a"]
+bg_color = Color(0, 1, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b61mj"]
+bg_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jehe1"]
+bg_color = Color(0, 0.498039, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jiqlv"]
+bg_color = Color(0.498039, 0, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ev5s"]
+bg_color = Color(1, 0, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="MeasureRow" type="GridContainer"]
+texture_filter = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 64.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+columns = 8
+script = ExtResource("1_bvy1u")
+
+[node name="A" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d55pe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g8sv7")
+toggle_mode = true
+
+[node name="S" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d55pe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4xcx6")
+toggle_mode = true
+
+[node name="D" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d55pe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gtjie")
+toggle_mode = true
+
+[node name="F" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d55pe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hci3a")
+toggle_mode = true
+
+[node name="J" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d55pe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b61mj")
+toggle_mode = true
+
+[node name="K" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d55pe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jehe1")
+toggle_mode = true
+
+[node name="L" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d55pe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jiqlv")
+toggle_mode = true
+
+[node name="_" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d55pe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4ev5s")
+toggle_mode = true

@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://0b74v5s1avm0"]
+
+[ext_resource type="AudioStream" uid="uid://blx2g712dyr2f" path="res://MusicAssets/Azakaela - Comet Crashin - 05 Gravity.mp3" id="1_cpekx"]
+[ext_resource type="Script" path="res://ChartContainer.gd" id="1_gr523"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1928.0
+offset_bottom = 1072.0
+
+[node name="Track" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_cpekx")
+volume_db = -12.0
+
+[node name="ChartContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.275
+anchor_top = 0.0444444
+anchor_right = 0.675
+anchor_bottom = 0.962963
+follow_focus = true
+script = ExtResource("1_gr523")
+bpm = 150.0
+JSON_PATH = "res://Gravity.json"
+metadata/_edit_use_anchors_ = true
+
+[node name="VboxContainer" type="VBoxContainer" parent="ChartContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Save_JSON_File" type="Button" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 80.0
+offset_right = 64.0
+offset_bottom = 88.0
+text = "Save JSON"
+
+[node name="PlayTrack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 152.0
+offset_right = 143.0
+offset_bottom = 183.0
+text = "Play Track"
+
+[node name="PauseTrack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 216.0
+offset_right = 157.0
+offset_bottom = 247.0
+text = "Pause Track"
+
+[node name="StopTrack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 288.0
+offset_right = 146.0
+offset_bottom = 319.0
+text = "Stop Track"
+
+[connection signal="pressed" from="Save_JSON_File" to="ChartContainer" method="_on_save_json_file_pressed"]
+[connection signal="pressed" from="PlayTrack" to="ChartContainer" method="_on_play_track_pressed"]
+[connection signal="pressed" from="PauseTrack" to="ChartContainer" method="_on_pause_track_pressed"]
+[connection signal="pressed" from="StopTrack" to="ChartContainer" method="_on_stop_track_pressed"]
