@@ -19,8 +19,7 @@ extends Node2D
 @onready var diamond_8 = $Diamond8
 
 @export var bpm: float = 120.0  # BPM of the song
-@export var offset: float = 2
-
+@export var offset: float = 2.0
 @export var JSON_PATH: String = ""
 
 const DIAMOND_FULL = preload("res://Textures/Diamond2.png")
@@ -30,16 +29,26 @@ const NOTE = preload("res://Scenes/note.tscn")
 var song_data: Array = []
 var note_spawn_index: int = 0
 var song_started: bool = false
-var time_per_16th_note: float = 0.0
+
+# Calculate the interval for a 16th note
+var sixteenth_note_interval: float = 0.0
 
 func _ready():
+	sixteenth_note_interval = 60.0 / bpm / 4.0
+	
 	var song = FileAccess.open(JSON_PATH, FileAccess.READ)
 	var obj = JSON.new()
 	var json_str = song.get_as_text()
 	obj.parse(json_str)
 	song_data = obj.get_data()
 
-	time_per_16th_note = 60.0 / (bpm * 4)  # Calculate the duration of one 16th note
+	spawn_notes()
+	spawn_notes()
+	spawn_notes()
+	spawn_notes()
+	spawn_notes()
+	spawn_notes()
+	spawn_notes()
 	spawn_notes()
 	$Music.play()
 	song_started = true
@@ -47,42 +56,20 @@ func _ready():
 func _process(_delta):
 	if song_started and note_spawn_index < song_data.size():
 		spawn_notes()
+		spawn_notes()
+		spawn_notes()
+		spawn_notes()
 
 	change_diamond_texture()
 
 func change_diamond_texture():
-	if Input.is_action_pressed("a"):
-		diamond_1.texture = DIAMOND_FULL
-	else:
-		diamond_1.texture = DIAMOND_EMPTY
-	if Input.is_action_pressed("s"):
-		diamond_2.texture = DIAMOND_FULL
-	else:
-		diamond_2.texture = DIAMOND_EMPTY
-	if Input.is_action_pressed("d"):
-		diamond_3.texture = DIAMOND_FULL
-	else:
-		diamond_3.texture = DIAMOND_EMPTY
-	if Input.is_action_pressed("f"):
-		diamond_4.texture = DIAMOND_FULL
-	else:
-		diamond_4.texture = DIAMOND_EMPTY
-	if Input.is_action_pressed("j"):
-		diamond_5.texture = DIAMOND_FULL
-	else:
-		diamond_5.texture = DIAMOND_EMPTY
-	if Input.is_action_pressed("k"):
-		diamond_6.texture = DIAMOND_FULL
-	else:
-		diamond_6.texture = DIAMOND_EMPTY
-	if Input.is_action_pressed("l"):
-		diamond_7.texture = DIAMOND_FULL
-	else:
-		diamond_7.texture = DIAMOND_EMPTY
-	if Input.is_action_pressed(";"):
-		diamond_8.texture = DIAMOND_FULL
-	else:
-		diamond_8.texture = DIAMOND_EMPTY
+	for i in range(8):
+		var key = ["a", "s", "d", "f", "j", "k", "l", ";"][i]
+		var diamond = [diamond_1, diamond_2, diamond_3, diamond_4, diamond_5, diamond_6, diamond_7, diamond_8][i]
+		if Input.is_action_pressed(key):
+			diamond.texture = DIAMOND_FULL
+		else:
+			diamond.texture = DIAMOND_EMPTY
 
 func spawn_notes():
 	var current_time = $Music.get_playback_position()
@@ -93,7 +80,10 @@ func spawn_notes():
 
 		var adjusted_note_time = note_time - offset
 
-		if current_time >= adjusted_note_time:
+		# Quantize note spawning to 16th note intervals
+		var quantized_time = round(adjusted_note_time / sixteenth_note_interval) * sixteenth_note_interval
+
+		if current_time >= quantized_time:
 			var note_instance = NOTE.instantiate()
 			
 			match note_key:
@@ -122,3 +112,6 @@ func spawn_notes():
 			note_spawn_index += 1
 		else:
 			break
+
+func _on_music_finished():
+	get_tree().change_scene_to_file("res://Scenes/Menu/Menu.tscn")

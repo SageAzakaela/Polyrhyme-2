@@ -31,7 +31,7 @@ var time_per_16th_note: float = 0.0
 
 func _ready():
 	track_duration = $Music.stream.get_length()
-	time_per_16th_note = 60.0 / (bpm * 8)  # Calculate the duration of one 16th note
+	time_per_16th_note = 60.0 / (bpm * 4)  # Calculate the duration of one 16th note
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"): 

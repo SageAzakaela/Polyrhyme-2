@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://ra6ur5o6xxvd"]
+[gd_scene load_steps=8 format=3 uid="uid://dans7ayhtnkyg"]
 
 [ext_resource type="Script" path="res://Scripts/Song1_updated.gd" id="1_8sch5"]
-[ext_resource type="AudioStream" uid="uid://dat5b22ptnhyv" path="res://python/Icicles_AzakaelasRemix_Mix2.wav" id="2_fitr3"]
+[ext_resource type="AudioStream" uid="uid://c4eegms6ix7cu" path="res://MusicAssets/Icicles_AzakaelasRemix_Mix2.wav" id="2_rhibm"]
 [ext_resource type="Texture2D" uid="uid://xv73iswtxltc" path="res://Textures/Diamond.png" id="3_s0brv"]
 [ext_resource type="Script" path="res://Scripts/Target.gd" id="4_b826c"]
 [ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="5_sjmlt"]
@@ -14,11 +14,12 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_8sch5")
-bpm = 125.0
+bpm = 105.0
+offset = 1.2
 JSON_PATH = "res://Icicles.json"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_fitr3")
+stream = ExtResource("2_rhibm")
 volume_db = -8.0
 
 [node name="Diamond1" type="Sprite2D" parent="." node_paths=PackedStringArray("music")]
@@ -88,7 +89,7 @@ position = Vector2(805, 981)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("3_s0brv")
 script = ExtResource("4_b826c")
-key = "k"
+key = "d"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
 
@@ -119,7 +120,7 @@ position = Vector2(997, 981)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("3_s0brv")
 script = ExtResource("4_b826c")
-key = "l"
+key = "f"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
 
@@ -298,7 +299,7 @@ scale = Vector2(0.75, 0.75)
 metadata/_edit_group_ = true
 
 [node name="Spawner6" type="Node2D" parent="."]
-modulate = Color(0, 0, 1, 1)
+modulate = Color(0, 0.360784, 1, 1)
 position = Vector2(1384, 16)
 scale = Vector2(0.75, 0.75)
 metadata/_edit_group_ = true

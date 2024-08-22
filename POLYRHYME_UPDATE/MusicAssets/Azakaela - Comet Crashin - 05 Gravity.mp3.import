@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://blx2g712dyr2f"
+path="res://.godot/imported/Azakaela - Comet Crashin - 05 Gravity.mp3-290f693bd30ff6b6f29670bbb9249e45.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - Comet Crashin - 05 Gravity.mp3"
+dest_files=["res://.godot/imported/Azakaela - Comet Crashin - 05 Gravity.mp3-290f693bd30ff6b6f29670bbb9249e45.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=150.0
+beat_count=0
+bar_beats=4

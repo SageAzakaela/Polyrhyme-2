@@ -12,7 +12,9 @@ func get_input():
 	if has_note and note != null:
 		if Input.is_action_just_pressed(key):
 			if note_in_hitbox():
-				Score.score += 10
+				Score.multiplier += 0.1
+				Score.score += 10 + (10 * Score.multiplier)
+				
 				print("Hit! Current Score:", Score.score)
 				queue_free_note()
 				$GPUParticles2D.emitting = false

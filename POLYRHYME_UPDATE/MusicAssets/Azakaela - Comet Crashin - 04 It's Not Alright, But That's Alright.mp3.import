@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfbnactg4wqos"
+path="res://.godot/imported/Azakaela - Comet Crashin - 04 It's Not Alright, But That's Alright.mp3-c90d20dc8b06f9b2a0435b7fb20f88f0.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - Comet Crashin - 04 It's Not Alright, But That's Alright.mp3"
+dest_files=["res://.godot/imported/Azakaela - Comet Crashin - 04 It's Not Alright, But That's Alright.mp3-c90d20dc8b06f9b2a0435b7fb20f88f0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

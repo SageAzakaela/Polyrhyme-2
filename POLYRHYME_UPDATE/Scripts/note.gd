@@ -8,7 +8,7 @@ var time: float = 0.0  # The time when the note should be hit
 var start_y: float = -1000.0  # Initial Y position of the note
 var start_time: float = 0.0  # Time at which the note starts moving
 var total_time: float = 0.0  # Total time from start to hit
-var early_spawn_offset: float = 0.0  # Spawn the note this many seconds earlier
+var early_spawn_offset: float = 0  # Spawn the note this many seconds earlier
 
 func set_note_data(data: Dictionary):
 	note_data = data
@@ -44,12 +44,13 @@ func move_towards_target(delta):
 		var progress = (time_elapsed / total_time)
 
 		# Interpolate the Y position using lerp
-		global_position.y = lerp(start_y, target_y -24, progress)
+		global_position.y = lerp(start_y, target_y, progress)
 		#print("Note moving. Current position:", global_position.y, "Target position:", target_y)
 	else:
 		# If the note has passed the target time or is late, remove it
 		#print("Note removed at position:", global_position.y)
 		Score.score -= 10
+		Score.multiplier = 0.1
 		queue_free()
 
 	# If the note reaches or passes the target Y position, remove it

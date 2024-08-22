@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d38ktsyuw2wfa"
+path="res://.godot/imported/Azakaela - Energy Theft - 02 Electric River.mp3-eb987678736f371c69425bdba28e8cce.mp3str"
+
+[deps]
+
+source_file="res://python/Azakaela - Energy Theft - 02 Electric River.mp3"
+dest_files=["res://.godot/imported/Azakaela - Energy Theft - 02 Electric River.mp3-eb987678736f371c69425bdba28e8cce.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

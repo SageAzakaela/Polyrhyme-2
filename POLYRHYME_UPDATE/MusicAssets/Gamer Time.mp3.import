@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dh5qh488cmllp"
+path="res://.godot/imported/Gamer Time.mp3-0de54629567dbc7cf9859ad275d36654.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Gamer Time.mp3"
+dest_files=["res://.godot/imported/Gamer Time.mp3-0de54629567dbc7cf9859ad275d36654.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
