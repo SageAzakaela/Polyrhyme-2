@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bvi6ovbgktpuu"]
 
 [ext_resource type="Script" path="res://Scripts/Main_updated.gd" id="1_npe1d"]
-[ext_resource type="AudioStream" uid="uid://cel3fwkac44ei" path="res://MusicAssets/Azakaela - Mega Moonlight Mania - 11 Mega Moonlight Mania.mp3" id="2_dpsgx"]
+[ext_resource type="AudioStream" uid="uid://dgoykrlemcvk0" path="res://MusicAssets/Losin My Cool - 125 BPM - Azakaela.mp3" id="2_8ugo6"]
 [ext_resource type="Texture2D" uid="uid://xv73iswtxltc" path="res://Textures/Diamond.png" id="3_amt1f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e3lic"]
@@ -9,10 +9,11 @@ radius = 42.6667
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_npe1d")
-song_name = "Mega Moonlight Mania"
+song_name = "Losin My Cool"
+bpm = 125.0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_dpsgx")
+stream = ExtResource("2_8ugo6")
 
 [node name="Diamond1" type="Sprite2D" parent="."]
 modulate = Color(1, 0, 0, 1)

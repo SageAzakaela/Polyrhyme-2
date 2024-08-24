@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=3 uid="uid://7b4qkj3ddqpu"]
+
+[ext_resource type="AudioStream" uid="uid://bxna152oup057" path="res://MusicAssets/Azakaela - aexplosivé - 03 nitro.mp3" id="1_8wb6k"]
+[ext_resource type="Script" path="res://Scenes/ChartContainer_StartFromScratch.gd" id="2_feygy"]
+[ext_resource type="Script" path="res://Scenes/SongTransport.gd" id="3_gg4ru"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6e8bg"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1928.0
+offset_bottom = 1072.0
+
+[node name="Track" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_8wb6k")
+volume_db = -6.0
+
+[node name="ChartContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.366667
+anchor_top = 0.0592593
+anchor_right = 0.6
+anchor_bottom = 0.948148
+theme_override_styles/panel = SubResource("StyleBoxFlat_6e8bg")
+follow_focus = true
+script = ExtResource("2_feygy")
+bpm = 75.0
+default_file_name = "Nitro"
+metadata/_edit_use_anchors_ = true
+
+[node name="VboxContainer" type="VBoxContainer" parent="ChartContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="Save_JSON_File" type="Button" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 80.0
+offset_right = 64.0
+offset_bottom = 88.0
+text = "Save JSON"
+
+[node name="PlayTrack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 152.0
+offset_right = 143.0
+offset_bottom = 183.0
+text = "Play Track"
+
+[node name="PauseTrack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 216.0
+offset_right = 157.0
+offset_bottom = 247.0
+text = "Pause Track"
+
+[node name="StopTrack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 288.0
+offset_right = 146.0
+offset_bottom = 319.0
+text = "Stop Track"
+
+[node name="ClearAllNotes" type="Button" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 352.0
+offset_right = 146.0
+offset_bottom = 383.0
+text = "ClearAllNotes"
+
+[node name="SongTransport" type="VSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.358332
+anchor_top = 0.0601852
+anchor_right = 0.358332
+anchor_bottom = 0.0601852
+offset_left = 16.0024
+offset_top = 959.0
+offset_right = 32.0024
+offset_bottom = 1918.0
+rotation = 3.14159
+ticks_on_borders = true
+script = ExtResource("3_gg4ru")
+bpm = 75.0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Save_JSON_File" to="ChartContainer" method="_on_save_json_file_pressed"]
+[connection signal="pressed" from="PlayTrack" to="ChartContainer" method="_on_play_track_pressed"]
+[connection signal="pressed" from="PauseTrack" to="ChartContainer" method="_on_pause_track_pressed"]
+[connection signal="pressed" from="StopTrack" to="ChartContainer" method="_on_stop_track_pressed"]
+[connection signal="pressed" from="ClearAllNotes" to="ChartContainer" method="_on_clear_all_notes_pressed"]
+[connection signal="drag_ended" from="SongTransport" to="SongTransport" method="_on_drag_ended"]
+[connection signal="value_changed" from="SongTransport" to="SongTransport" method="_on_value_changed"]

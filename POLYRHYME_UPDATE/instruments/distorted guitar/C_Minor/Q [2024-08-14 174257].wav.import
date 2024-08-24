@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://blcyewa4tiqhc"
+path="res://.godot/imported/Q [2024-08-14 174257].wav-0cd3b7df5ee786f2d4aa0d72586db191.sample"
+
+[deps]
+
+source_file="res://instruments/distorted guitar/C_Minor/Q [2024-08-14 174257].wav"
+dest_files=["res://.godot/imported/Q [2024-08-14 174257].wav-0cd3b7df5ee786f2d4aa0d72586db191.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

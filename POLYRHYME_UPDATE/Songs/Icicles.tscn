@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dans7ayhtnkyg"]
+[gd_scene load_steps=8 format=3 uid="uid://mfdk2kjcjdhd"]
 
-[ext_resource type="Script" path="res://Scripts/Song1_updated.gd" id="1_8sch5"]
-[ext_resource type="AudioStream" uid="uid://c4eegms6ix7cu" path="res://MusicAssets/Icicles_AzakaelasRemix_Mix2.wav" id="2_rhibm"]
-[ext_resource type="Texture2D" uid="uid://xv73iswtxltc" path="res://Textures/Diamond.png" id="3_s0brv"]
-[ext_resource type="Script" path="res://Scripts/Target.gd" id="4_b826c"]
-[ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="5_sjmlt"]
+[ext_resource type="Script" path="res://Scripts/Song1_updated.gd" id="1_lnwke"]
+[ext_resource type="AudioStream" uid="uid://c4eegms6ix7cu" path="res://MusicAssets/Icicles_AzakaelasRemix_Mix2.wav" id="2_3y0bt"]
+[ext_resource type="Texture2D" uid="uid://xv73iswtxltc" path="res://Textures/Diamond.png" id="3_nqufp"]
+[ext_resource type="Script" path="res://Scripts/Target.gd" id="4_tpoa1"]
+[ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="5_owiwy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nhexy"]
 radius = 121.399
@@ -13,20 +13,21 @@ radius = 121.399
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_8sch5")
+script = ExtResource("1_lnwke")
 bpm = 105.0
-JSON_PATH = "res://Icicles.json"
+offset = 3.0
+JSON_PATH = "res://Songs/JSON/Icicles.json"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_rhibm")
+stream = ExtResource("2_3y0bt")
 volume_db = -8.0
 
 [node name="Diamond1" type="Sprite2D" parent="." node_paths=PackedStringArray("music")]
 modulate = Color(1, 0, 0, 1)
 position = Vector2(421, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_s0brv")
-script = ExtResource("4_b826c")
+texture = ExtResource("3_nqufp")
+script = ExtResource("4_tpoa1")
 key = "a"
 music = NodePath("../Music")
 
@@ -43,7 +44,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_s0brv")
+texture = ExtResource("3_nqufp")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -55,8 +56,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(1, 0.466667, 0, 1)
 position = Vector2(613, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_s0brv")
-script = ExtResource("4_b826c")
+texture = ExtResource("3_nqufp")
+script = ExtResource("4_tpoa1")
 key = "s"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
@@ -74,7 +75,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_s0brv")
+texture = ExtResource("3_nqufp")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -86,8 +87,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(1, 1, 0, 1)
 position = Vector2(805, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_s0brv")
-script = ExtResource("4_b826c")
+texture = ExtResource("3_nqufp")
+script = ExtResource("4_tpoa1")
 key = "d"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
@@ -105,7 +106,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_s0brv")
+texture = ExtResource("3_nqufp")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -117,8 +118,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0, 1, 0, 1)
 position = Vector2(997, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_s0brv")
-script = ExtResource("4_b826c")
+texture = ExtResource("3_nqufp")
+script = ExtResource("4_tpoa1")
 key = "f"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
@@ -136,7 +137,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_s0brv")
+texture = ExtResource("3_nqufp")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -148,8 +149,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0, 1, 1, 1)
 position = Vector2(1189, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_s0brv")
-script = ExtResource("4_b826c")
+texture = ExtResource("3_nqufp")
+script = ExtResource("4_tpoa1")
 key = "j"
 music = NodePath("../Music")
 
@@ -166,7 +167,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_s0brv")
+texture = ExtResource("3_nqufp")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -178,8 +179,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0.329412, 0.529412, 1, 1)
 position = Vector2(1381, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_s0brv")
-script = ExtResource("4_b826c")
+texture = ExtResource("3_nqufp")
+script = ExtResource("4_tpoa1")
 key = "k"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
@@ -197,7 +198,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_s0brv")
+texture = ExtResource("3_nqufp")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -209,8 +210,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0.556863, 0, 1, 1)
 position = Vector2(1573, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_s0brv")
-script = ExtResource("4_b826c")
+texture = ExtResource("3_nqufp")
+script = ExtResource("4_tpoa1")
 key = "l"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
@@ -228,7 +229,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_s0brv")
+texture = ExtResource("3_nqufp")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -240,8 +241,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(1, 0, 1, 1)
 position = Vector2(1765, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_s0brv")
-script = ExtResource("4_b826c")
+texture = ExtResource("3_nqufp")
+script = ExtResource("4_tpoa1")
 key = ";"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
@@ -259,7 +260,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_s0brv")
+texture = ExtResource("3_nqufp")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -321,7 +322,7 @@ offset_right = 275.0
 offset_bottom = 104.0
 theme_override_font_sizes/font_size = 48
 text = "SCORE: 0"
-script = ExtResource("5_sjmlt")
+script = ExtResource("5_owiwy")
 
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="area_entered" from="Diamond1/Area2D" to="." method="_on_area_2d_area_entered"]

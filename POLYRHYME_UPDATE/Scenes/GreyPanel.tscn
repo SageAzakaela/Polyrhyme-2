@@ -1,11 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://b30din8wb13aj"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yi0iv"]
-bg_color = Color(0.168627, 0.168627, 0.168627, 1)
+[ext_resource type="Script" path="res://Scripts/GreyPanel.gd" id="1_fdm1q"]
 
-[node name="Panel" type="Panel"]
+[node name="Panel" type="Label"]
 custom_minimum_size = Vector2(0, 12)
 anchors_preset = 10
 anchor_right = 1.0
+offset_bottom = 23.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_yi0iv")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_fdm1q")

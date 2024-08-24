@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxna152oup057"
+path="res://.godot/imported/Azakaela - aexplosivé - 03 nitro.mp3-711c122782437043702703f81fa9b494.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - aexplosivé - 03 nitro.mp3"
+dest_files=["res://.godot/imported/Azakaela - aexplosivé - 03 nitro.mp3-711c122782437043702703f81fa9b494.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

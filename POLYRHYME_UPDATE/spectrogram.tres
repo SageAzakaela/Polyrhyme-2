@@ -1,0 +1,45 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://86pdc17rxql3"]
+
+[ext_resource type="Shader" path="res://Scenes/Charter.gdshader" id="1_yv7nw"]
+
+[sub_resource type="Gradient" id="Gradient_awqgy"]
+colors = PackedColorArray(0, 0.966667, 1, 1, 1, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5p1yy"]
+gradient = SubResource("Gradient_awqgy")
+
+[resource]
+shader = ExtResource("1_yv7nw")
+shader_parameter/hz0 = 22.0
+shader_parameter/hz1 = 33.0
+shader_parameter/hz2 = 44.0
+shader_parameter/hz3 = 63.0
+shader_parameter/hz4 = 90.0
+shader_parameter/hz5 = 125.0
+shader_parameter/hz6 = 175.0
+shader_parameter/hz7 = 250.0
+shader_parameter/hz8 = 350.0
+shader_parameter/hz9 = 700.0
+shader_parameter/hz10 = 1000.0
+shader_parameter/hz11 = 1400.0
+shader_parameter/hz12 = 2000.0
+shader_parameter/hz13 = 2800.0
+shader_parameter/hz14 = 4000.0
+shader_parameter/hz15 = 5600.0
+shader_parameter/hz16 = 8000.0
+shader_parameter/hz17 = 11000.0
+shader_parameter/hz18 = 16000.0
+shader_parameter/hz19 = 22000.0
+shader_parameter/hz20 = 28000.0
+shader_parameter/hz21 = 32000.0
+shader_parameter/hz22 = 48000.0
+shader_parameter/hz23 = 64000.0
+shader_parameter/hz24 = 86000.0
+shader_parameter/hz25 = 98000.0
+shader_parameter/hz26 = 100000.0
+shader_parameter/hz27 = 160000.0
+shader_parameter/hz28 = 200000.0
+shader_parameter/hz29 = 280000.0
+shader_parameter/hz30 = 300000.0
+shader_parameter/hz31 = 600000.0
+shader_parameter/tex = SubResource("GradientTexture2D_5p1yy")

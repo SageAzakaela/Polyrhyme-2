@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://MeasureRow.gd" id="1_bvy1u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d55pe"]
-bg_color = Color(0.270588, 0.270588, 0.270588, 1)
+bg_color = Color(0.74902, 0.74902, 0.74902, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -75,18 +75,29 @@ corner_radius_bottom_left = 15
 
 [node name="MeasureRow" type="GridContainer"]
 texture_filter = 1
+custom_minimum_size = Vector2(0, 24)
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 64.0
+offset_bottom = 32.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
-columns = 8
+columns = 10
 script = ExtResource("1_bvy1u")
+
+[node name="BeatNumber" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 17
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="A" type="Button" parent="."]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
@@ -96,7 +107,7 @@ toggle_mode = true
 
 [node name="S" type="Button" parent="."]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
@@ -106,7 +117,7 @@ toggle_mode = true
 
 [node name="D" type="Button" parent="."]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
@@ -116,7 +127,7 @@ toggle_mode = true
 
 [node name="F" type="Button" parent="."]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
@@ -126,7 +137,7 @@ toggle_mode = true
 
 [node name="J" type="Button" parent="."]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
@@ -136,7 +147,7 @@ toggle_mode = true
 
 [node name="K" type="Button" parent="."]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
@@ -146,7 +157,7 @@ toggle_mode = true
 
 [node name="L" type="Button" parent="."]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
@@ -156,7 +167,7 @@ toggle_mode = true
 
 [node name="_" type="Button" parent="."]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
