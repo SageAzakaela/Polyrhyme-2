@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://1c2b3smoyk2y"]
+
+[ext_resource type="Script" path="res://resources/track.gd" id="1_lkh23"]
+[ext_resource type="AudioStream" uid="uid://bxna152oup057" path="res://MusicAssets/Azakaela - aexplosivé - 03 nitro.mp3" id="1_wx2qp"]
+
+[resource]
+script = ExtResource("1_lkh23")
+BPM = 150.0
+Name = "Nitro"
+JSON_path = "res://Songs/JSON/Nitro.json"
+MusicFile = ExtResource("1_wx2qp")

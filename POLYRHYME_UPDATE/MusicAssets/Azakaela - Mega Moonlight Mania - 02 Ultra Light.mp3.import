@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://g87llxhydwug"
+path="res://.godot/imported/Azakaela - Mega Moonlight Mania - 02 Ultra Light.mp3-ec092a9ecdb28434f515c5434877fef5.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - Mega Moonlight Mania - 02 Ultra Light.mp3"
+dest_files=["res://.godot/imported/Azakaela - Mega Moonlight Mania - 02 Ultra Light.mp3-ec092a9ecdb28434f515c5434877fef5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

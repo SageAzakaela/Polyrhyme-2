@@ -35,21 +35,21 @@ func _process(_delta):
 	if Input.is_action_just_pressed(";"):
 		_colon.play()
 
-	if Input.is_action_just_pressed("Q"):
+	if Input.is_action_just_pressed("q"):
 		_q.play()
-	if Input.is_action_just_pressed("W"):
+	if Input.is_action_just_pressed("w"):
 		_w.play()
-	if Input.is_action_just_pressed("E"):
+	if Input.is_action_just_pressed("e"):
 		_e.play()
-	if Input.is_action_just_pressed("R"):
+	if Input.is_action_just_pressed("r"):
 		_r.play()
-	if Input.is_action_just_pressed("U"):
+	if Input.is_action_just_pressed("u"):
 		_u.play()
-	if Input.is_action_just_pressed("I"):
+	if Input.is_action_just_pressed("i"):
 		_i.play()
-	if Input.is_action_just_pressed("O"):
+	if Input.is_action_just_pressed("o"):
 		_o.play()
-	if Input.is_action_just_pressed("P"):
+	if Input.is_action_just_pressed("p"):
 		_p.play()
 
 
@@ -71,19 +71,19 @@ func _process(_delta):
 		_colon.stream_paused = true
 
 
-	if Input.is_action_just_released("Q"):
+	if Input.is_action_just_released("q"):
 		_q.stream_paused = true
-	if Input.is_action_just_released("W"):
+	if Input.is_action_just_released("w"):
 		_w.stream_paused = true
-	if Input.is_action_just_released("E"):
+	if Input.is_action_just_released("e"):
 		_e.stream_paused = true
-	if Input.is_action_just_released("R"):
+	if Input.is_action_just_released("r"):
 		_r.stream_paused = true
-	if Input.is_action_just_released("U"):
+	if Input.is_action_just_released("u"):
 		_u.stream_paused = true
-	if Input.is_action_just_released("I"):
+	if Input.is_action_just_released("i"):
 		_i.stream_paused = true
-	if Input.is_action_just_released("O"):
+	if Input.is_action_just_released("o"):
 		_o.stream_paused = true
-	if Input.is_action_just_released("P"):
+	if Input.is_action_just_released("p"):
 		_p.stream_paused = true

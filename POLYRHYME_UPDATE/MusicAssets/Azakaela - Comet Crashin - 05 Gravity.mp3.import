@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://blx2g712dyr2f"
+uid="uid://c5bjjkr10d03q"
 path="res://.godot/imported/Azakaela - Comet Crashin - 05 Gravity.mp3-290f693bd30ff6b6f29670bbb9249e45.mp3str"
 
 [deps]
@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Azakaela - Comet Crashin - 05 Gravity.mp3-290
 [params]
 
 loop=false
-loop_offset=0.0
-bpm=150.0
+loop_offset=0
+bpm=0
 beat_count=0
 bar_beats=4

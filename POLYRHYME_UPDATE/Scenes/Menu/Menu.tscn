@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1gwhusg44k7b"]
+[gd_scene load_steps=4 format=3 uid="uid://b1gwhusg44k7b"]
 
 [ext_resource type="Script" path="res://Scripts/SongContainer.gd" id="1_h14n2"]
 [ext_resource type="Script" path="res://Scenes/Menu/ScoreLabel.gd" id="1_n0ouy"]
+[ext_resource type="PackedScene" uid="uid://dnajlvagilkqq" path="res://Scenes/song_button.tscn" id="3_uqfu0"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -45,3 +46,48 @@ anchor_bottom = 0.82963
 offset_bottom = 6.10352e-05
 script = ExtResource("1_h14n2")
 metadata/_edit_use_anchors_ = true
+
+[node name="SongButton" parent="SongContainer" instance=ExtResource("3_uqfu0")]
+layout_mode = 2
+text = "Aexplosive"
+Song = "res://Songs/aexplosive.tscn"
+
+[node name="SongButton2" parent="SongContainer" instance=ExtResource("3_uqfu0")]
+layout_mode = 2
+text = "Gravity"
+Song = "res://Songs/Gravity.tscn"
+
+[node name="SongButton3" parent="SongContainer" instance=ExtResource("3_uqfu0")]
+layout_mode = 2
+text = "Hyper Dungeon"
+Song = "res://Songs/Hyper Dungeon.tscn"
+
+[node name="SongButton4" parent="SongContainer" instance=ExtResource("3_uqfu0")]
+layout_mode = 2
+text = "Icicles"
+Song = "res://Songs/Icicles.tscn"
+
+[node name="SongButton5" parent="SongContainer" instance=ExtResource("3_uqfu0")]
+layout_mode = 2
+text = "Mind's Eye"
+Song = "res://Songs/Mind's Eye.tscn"
+
+[node name="SongButton6" parent="SongContainer" instance=ExtResource("3_uqfu0")]
+layout_mode = 2
+text = "Myth and Legend"
+Song = "res://Songs/Myth and Legend.tscn"
+
+[node name="SongButton7" parent="SongContainer" instance=ExtResource("3_uqfu0")]
+layout_mode = 2
+text = "Song Name HereNitro"
+Song = "res://Songs/Nitro.tscn"
+
+[node name="SongButton8" parent="SongContainer" instance=ExtResource("3_uqfu0")]
+layout_mode = 2
+text = "Syper"
+Song = "res://Songs/Syper.tscn"
+
+[node name="SongButton9" parent="SongContainer" instance=ExtResource("3_uqfu0")]
+layout_mode = 2
+text = "Voyage Eternal"
+Song = "res://Songs/Voyage Eternal.tscn"

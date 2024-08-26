@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgcrjgg3r1bkl"
+path="res://.godot/imported/Azakaela - Answer Me - 08 Myth and Legend.mp3-a3192b9c9c60cb810a178142823942f1.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - Answer Me - 08 Myth and Legend.mp3"
+dest_files=["res://.godot/imported/Azakaela - Answer Me - 08 Myth and Legend.mp3-a3192b9c9c60cb810a178142823942f1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

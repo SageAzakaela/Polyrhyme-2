@@ -1,8 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://7b4qkj3ddqpu"]
+[gd_scene load_steps=30 format=3 uid="uid://7b4qkj3ddqpu"]
 
-[ext_resource type="AudioStream" uid="uid://bxna152oup057" path="res://MusicAssets/Azakaela - aexplosivé - 03 nitro.mp3" id="1_8wb6k"]
 [ext_resource type="Script" path="res://Scenes/ChartContainer_StartFromScratch.gd" id="2_feygy"]
+[ext_resource type="AudioStream" uid="uid://dyuk65h23r6yt" path="res://MusicAssets/Blitzkrieg2_HyperDungeon_mix2.mp3" id="2_ocs02"]
 [ext_resource type="Script" path="res://Scenes/SongTransport.gd" id="3_gg4ru"]
+[ext_resource type="PackedScene" uid="uid://b1gwhusg44k7b" path="res://Scenes/Menu/Menu.tscn" id="4_amfii"]
+[ext_resource type="Script" path="res://Scripts/TRACK_EDITOR.gd" id="5_8sawi"]
+[ext_resource type="Resource" uid="uid://1c2b3smoyk2y" path="res://resources/Tracks/Nitro.tres" id="6_jf1f8"]
+[ext_resource type="Resource" uid="uid://bo3t42ufulcwa" path="res://resources/Tracks/Myth and Legend.tres" id="7_epxjh"]
+[ext_resource type="Resource" uid="uid://bs623tbguxg3a" path="res://resources/Tracks/CaeluxStorm.tres" id="8_cvksd"]
+[ext_resource type="Script" path="res://Scripts/PitchScaleSlider.gd" id="9_0jcg3"]
+[ext_resource type="Script" path="res://Scripts/EnableGuitar.gd" id="10_164et"]
+[ext_resource type="Script" path="res://GuitarPlayer.gd" id="11_2sosn"]
+[ext_resource type="AudioStream" uid="uid://chcwth2exd7oj" path="res://instruments/distorted guitar/C_Minor/A [2024-08-14 174250].wav" id="12_u48m4"]
+[ext_resource type="AudioStream" uid="uid://c581y72t7askn" path="res://instruments/distorted guitar/C_Minor/S [2024-08-14 174251].wav" id="13_feesk"]
+[ext_resource type="AudioStream" uid="uid://bif0l45dejytd" path="res://instruments/distorted guitar/C_Minor/D [2024-08-14 174252].wav" id="14_31uyl"]
+[ext_resource type="AudioStream" uid="uid://cvrt6tv0rd8v4" path="res://instruments/distorted guitar/C_Minor/F [2024-08-14 174253].wav" id="15_mnikl"]
+[ext_resource type="AudioStream" uid="uid://cgoppxtfb8yjc" path="res://instruments/distorted guitar/C_Minor/J [2024-08-14 174254].wav" id="16_do2e3"]
+[ext_resource type="AudioStream" uid="uid://c8ovumieq5kyt" path="res://instruments/distorted guitar/C_Minor/K [2024-08-14 174255].wav" id="17_lboa6"]
+[ext_resource type="AudioStream" uid="uid://bfbb8tcd1soj1" path="res://instruments/distorted guitar/C_Minor/L [2024-08-14 174256].wav" id="18_f43qf"]
+[ext_resource type="AudioStream" uid="uid://dn7gqed1ncuhf" path="res://instruments/distorted guitar/C_Minor/_ [2024-08-14 174257].wav" id="19_w5p6i"]
+[ext_resource type="AudioStream" uid="uid://blcyewa4tiqhc" path="res://instruments/distorted guitar/C_Minor/Q [2024-08-14 174257].wav" id="20_b8ye2"]
+[ext_resource type="AudioStream" uid="uid://br3me3tnaq3u0" path="res://instruments/distorted guitar/C_Minor/W [2024-08-14 174258].wav" id="21_pn1ch"]
+[ext_resource type="AudioStream" uid="uid://bkmm1x8q7avx6" path="res://instruments/distorted guitar/C_Minor/E [2024-08-14 174259].wav" id="22_n6yn6"]
+[ext_resource type="AudioStream" uid="uid://jf8hnvvfu2dh" path="res://instruments/distorted guitar/C_Minor/R [2024-08-14 174300].wav" id="23_yimga"]
+[ext_resource type="AudioStream" uid="uid://brj18epn271pw" path="res://instruments/distorted guitar/C_Minor/U [2024-08-14 174301].wav" id="24_v2cxv"]
+[ext_resource type="AudioStream" uid="uid://c1li4mmqejmtu" path="res://instruments/distorted guitar/C_Minor/I [2024-08-14 174302].wav" id="25_nioyh"]
+[ext_resource type="AudioStream" uid="uid://7auf80ds5hmp" path="res://instruments/distorted guitar/C_Minor/O [2024-08-14 174303].wav" id="26_rjcxn"]
+[ext_resource type="AudioStream" uid="uid://evu0y18dakvc" path="res://instruments/distorted guitar/C_Minor/P [2024-08-14 174304].wav" id="27_waljp"]
+[ext_resource type="Script" path="res://Scripts/Guitar Pitch Scale.gd" id="28_ymnrq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6e8bg"]
 bg_color = Color(0, 0, 0, 1)
@@ -19,24 +44,23 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 1928.0
 offset_bottom = 1072.0
+metadata/_edit_lock_ = true
 
 [node name="Track" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_8wb6k")
-volume_db = -6.0
+volume_db = -2.252
 
 [node name="ChartContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.366667
-anchor_top = 0.0592593
-anchor_right = 0.6
-anchor_bottom = 0.948148
+anchor_left = 0.241669
+anchor_top = 0.0666666
+anchor_right = 0.475002
+anchor_bottom = 0.955555
 theme_override_styles/panel = SubResource("StyleBoxFlat_6e8bg")
 follow_focus = true
 script = ExtResource("2_feygy")
-bpm = 75.0
-default_file_name = "Nitro"
-metadata/_edit_use_anchors_ = true
+default_file_name = "Hyper Dungeon"
+song_to_play = ExtResource("2_ocs02")
 
 [node name="VboxContainer" type="VBoxContainer" parent="ChartContainer"]
 layout_mode = 2
@@ -44,67 +68,298 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="Save_JSON_File" type="Button" parent="."]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 80.0
-offset_right = 64.0
-offset_bottom = 88.0
-text = "Save JSON"
-
-[node name="PlayTrack" type="Button" parent="."]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 152.0
-offset_right = 143.0
-offset_bottom = 183.0
-text = "Play Track"
-
-[node name="PauseTrack" type="Button" parent="."]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 216.0
-offset_right = 157.0
-offset_bottom = 247.0
-text = "Pause Track"
-
-[node name="StopTrack" type="Button" parent="."]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 288.0
-offset_right = 146.0
-offset_bottom = 319.0
-text = "Stop Track"
-
-[node name="ClearAllNotes" type="Button" parent="."]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 352.0
-offset_right = 146.0
-offset_bottom = 383.0
-text = "ClearAllNotes"
-
 [node name="SongTransport" type="VSlider" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.358332
-anchor_top = 0.0601852
+anchor_top = 0.0305555
 anchor_right = 0.358332
-anchor_bottom = 0.0601852
-offset_left = 16.0024
-offset_top = 959.0
-offset_right = 32.0024
-offset_bottom = 1918.0
+anchor_bottom = 0.0305556
+offset_left = -223.995
+offset_top = 999.0
+offset_right = -207.995
+offset_bottom = 1958.0
 rotation = 3.14159
 ticks_on_borders = true
 script = ExtResource("3_gg4ru")
-bpm = 75.0
+
+[node name="Save_JSON_File" type="Button" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 32.0
+offset_right = 279.0
+offset_bottom = 63.0
+text = "Save JSON"
+
+[node name="SaveScene" type="Button" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 158.0
+offset_bottom = 63.0
+text = "Save Scene"
+
+[node name="PlayTrack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 161.0
+offset_right = 151.0
+offset_bottom = 192.0
+text = "Play Track"
+
+[node name="PauseTrack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 160.0
+offset_right = 293.0
+offset_bottom = 191.0
+text = "Pause Track"
+
+[node name="StopTrack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 160.0
+offset_right = 410.0
+offset_bottom = 191.0
+text = "Stop Track"
+
+[node name="ClearAllNotes" type="Button" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 32.0
+offset_right = 410.0
+offset_bottom = 63.0
+text = "ClearAllNotes"
+
+[node name="EnableLoop" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 288.0
+offset_right = 253.0
+offset_bottom = 319.0
+text = "Toggle Loop Mode"
+
+[node name="IgnoreOffBeats" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 224.0
+offset_right = 253.0
+offset_bottom = 255.0
+text = "Ignore Off Beats"
+
+[node name="BeginLoop" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 352.0
+offset_right = 253.0
+offset_bottom = 383.0
+placeholder_text = "Loop Begin Beat"
+
+[node name="EndLoop" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 416.0
+offset_right = 253.0
+offset_bottom = 447.0
+placeholder_text = "Loop End Beat"
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 72.0
+offset_right = 1856.0
+offset_bottom = 1032.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(896, 960)
+render_target_update_mode = 4
+
+[node name="Control" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_amfii")]
+
+[node name="PlaySong" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1368.0
+offset_top = 32.0
+offset_right = 1455.0
+offset_bottom = 63.0
+text = "Refresh"
+
+[node name="TRACK_EDITOR" type="ScrollContainer" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.0333333
+anchor_top = 0.711111
+anchor_right = 0.229167
+anchor_bottom = 0.948148
+script = ExtResource("5_8sawi")
+tracks = Array[Resource("res://resources/track.gd")]([ExtResource("6_jf1f8"), ExtResource("7_epxjh"), ExtResource("8_cvksd")])
 metadata/_edit_use_anchors_ = true
 
+[node name="VBoxContainer" type="VBoxContainer" parent="TRACK_EDITOR"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PitchScaleSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.103704
+anchor_right = 0.220833
+anchor_bottom = 0.118519
+max_value = 1.0
+step = 0.1
+value = 1.0
+tick_count = 10
+ticks_on_borders = true
+script = ExtResource("9_0jcg3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="PitchScaleSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.551724
+anchor_top = -0.3125
+anchor_right = -0.193966
+anchor_bottom = 1.125
+text = "Pitch Scale"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="EnableGuitar" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 488.0
+offset_right = 108.0
+offset_bottom = 512.0
+text = "Enable Guitar"
+script = ExtResource("10_164et")
+
+[node name="GuitarPlayer" type="Node" parent="EnableGuitar"]
+script = ExtResource("11_2sosn")
+
+[node name="_A" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("12_u48m4")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_S" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("13_feesk")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_D" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("14_31uyl")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_F" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("15_mnikl")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_J" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("16_do2e3")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_K" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("17_lboa6")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_L" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("18_f43qf")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_colon" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("19_w5p6i")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_Q" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("20_b8ye2")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_W" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("21_pn1ch")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_E" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("22_n6yn6")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_R" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("23_yimga")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_U" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("24_v2cxv")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_I" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("25_nioyh")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_O" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("26_rjcxn")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="_P" type="AudioStreamPlayer" parent="EnableGuitar/GuitarPlayer"]
+stream = ExtResource("27_waljp")
+volume_db = -10.0
+bus = &"InstrumentBus"
+
+[node name="Guitar Pitch Scale" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.511111
+anchor_right = 0.220833
+anchor_bottom = 0.525926
+min_value = 0.5
+max_value = 1.5
+step = 0.1
+value = 1.0
+tick_count = 11
+ticks_on_borders = true
+script = ExtResource("28_ymnrq")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Guitar Pitch Scale"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.551724
+anchor_top = -0.3125
+anchor_right = -0.193966
+anchor_bottom = 1.125
+text = "Guitar Pitch"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="drag_ended" from="SongTransport" to="SongTransport" method="_on_drag_ended"]
+[connection signal="value_changed" from="SongTransport" to="SongTransport" method="_on_value_changed"]
 [connection signal="pressed" from="Save_JSON_File" to="ChartContainer" method="_on_save_json_file_pressed"]
+[connection signal="pressed" from="SaveScene" to="ChartContainer" method="_on_save_scene_pressed"]
 [connection signal="pressed" from="PlayTrack" to="ChartContainer" method="_on_play_track_pressed"]
 [connection signal="pressed" from="PauseTrack" to="ChartContainer" method="_on_pause_track_pressed"]
 [connection signal="pressed" from="StopTrack" to="ChartContainer" method="_on_stop_track_pressed"]
 [connection signal="pressed" from="ClearAllNotes" to="ChartContainer" method="_on_clear_all_notes_pressed"]
-[connection signal="drag_ended" from="SongTransport" to="SongTransport" method="_on_drag_ended"]
-[connection signal="value_changed" from="SongTransport" to="SongTransport" method="_on_value_changed"]
+[connection signal="toggled" from="IgnoreOffBeats" to="ChartContainer" method="_on_ignore_off_beats_toggled"]
+[connection signal="pressed" from="PlaySong" to="ChartContainer" method="_on_play_song_pressed"]
+[connection signal="value_changed" from="PitchScaleSlider" to="PitchScaleSlider" method="_on_value_changed"]
+[connection signal="toggled" from="EnableGuitar" to="ChartContainer" method="_on_enable_guitar_toggled"]
+[connection signal="toggled" from="EnableGuitar" to="EnableGuitar" method="_on_toggled"]
+[connection signal="value_changed" from="Guitar Pitch Scale" to="Guitar Pitch Scale" method="_on_value_changed"]

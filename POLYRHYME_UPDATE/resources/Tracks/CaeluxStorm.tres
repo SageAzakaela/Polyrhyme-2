@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Track" load_steps=3 format=3 uid="uid://bs623tbguxg3a"]
+
+[ext_resource type="AudioStream" uid="uid://731f8oihjyn8" path="res://MusicAssets/Azakaela - Water - 04 Caelux Storm.mp3" id="1_4g8k3"]
+[ext_resource type="Script" path="res://resources/track.gd" id="2_ihri2"]
+
+[resource]
+script = ExtResource("2_ihri2")
+BPM = 90.0
+Name = "Myth and Legend"
+JSON_path = "res://Songs/JSON/Caelux Storm.json"
+MusicFile = ExtResource("1_4g8k3")

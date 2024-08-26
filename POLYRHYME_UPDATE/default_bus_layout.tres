@@ -1,10 +1,13 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://dhpvrkijx5owj"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://dhpvrkijx5owj"]
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_ryr5b"]
 resource_name = "Reverb"
 room_size = 0.75
 damping = 0.87
 wet = 0.27
+
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_fsdbq"]
+resource_name = "Delay"
 
 [resource]
 bus/1/name = &"InstrumentBus"
@@ -15,3 +18,5 @@ bus/1/volume_db = -5.32994
 bus/1/send = &"Master"
 bus/1/effect/0/effect = SubResource("AudioEffectReverb_ryr5b")
 bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectDelay_fsdbq")
+bus/1/effect/1/enabled = true
