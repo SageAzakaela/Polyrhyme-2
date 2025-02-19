@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bj58jegmqa8np"
+path="res://.godot/imported/Azakaela - Comet Crashin - 05 Gravity_144bpm.ogg-5972e576f14baa9a6d8946853d15ae8b.oggvorbisstr"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - Comet Crashin - 05 Gravity_144bpm.ogg"
+dest_files=["res://.godot/imported/Azakaela - Comet Crashin - 05 Gravity_144bpm.ogg-5972e576f14baa9a6d8946853d15ae8b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

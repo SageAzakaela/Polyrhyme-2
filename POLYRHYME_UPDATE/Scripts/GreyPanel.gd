@@ -1,3 +1,4 @@
+#GreyPanel.GD
 extends Label
 
 var beat_number: int = 0

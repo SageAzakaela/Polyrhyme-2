@@ -1,6 +1,6 @@
 extends Label
 var percentage = 0 
-func _process(delta):
+func _process(_delta):
 	if Score.number_of_notes_in_song > 0:
 		percentage = (Score.number_of_notes_hit / float(Score.number_of_notes_in_song)) * 100
 	else:

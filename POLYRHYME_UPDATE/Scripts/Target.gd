@@ -1,3 +1,4 @@
+#Target.GD
 extends Sprite2D
 
 @export var key : String = ""
@@ -15,7 +16,7 @@ func get_input():
 		if Input.is_action_just_pressed(key):
 			if note_in_hitbox():
 				Score.multiplier += 0.1
-				Score.score += 10 + (10 * Score.multiplier)
+				Score.score += int(10 + (10 * Score.multiplier))
 				Score.number_of_notes_hit += 1
 				#print("Hit! Current Score:", Score.score)
 				queue_free_note()
@@ -25,7 +26,7 @@ func get_input():
 		if Input.is_action_just_pressed(high_key):
 			if note_in_hitbox():
 				Score.multiplier += 0.1
-				Score.score += 15 + (10 * Score.multiplier)
+				Score.score += int(15 + (10 * Score.multiplier))
 				Score.number_of_notes_hit += 1
 				#print("Hit! Current Score:", Score.score)
 				queue_free_note()
@@ -54,4 +55,5 @@ func _on_area_2d_area_exited(area):
 func queue_free_note():
 	if note != null:
 		note.get_parent().queue_free()  # Remove the note after it's been successfully hit
+		#note.get_parent().play_noise()
 		note = null

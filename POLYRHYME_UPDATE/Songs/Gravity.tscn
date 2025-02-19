@@ -1,12 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://q7y5v44v0pyf"]
+[gd_scene load_steps=17 format=3]
 
-[ext_resource type="Script" path="res://Scripts/Song1_updated.gd" id="1_itrs2"]
-[ext_resource type="AudioStream" uid="uid://c5bjjkr10d03q" path="res://MusicAssets/Azakaela - Comet Crashin - 05 Gravity.mp3" id="2_56bfv"]
-[ext_resource type="Texture2D" uid="uid://xv73iswtxltc" path="res://Textures/Diamond.png" id="3_vnnmm"]
-[ext_resource type="Script" path="res://Scripts/Target.gd" id="4_kaadn"]
-[ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="5_yu2h2"]
+[ext_resource type="Script" path="res://Scripts/Song.gd" id="1_i2rip"]
+[ext_resource type="AudioStream" path="res://MusicAssets/Azakaela - Comet Crashin - 05 Gravity_144bpm.ogg" id="2_8ihhk"]
+[ext_resource type="Texture2D" path="res://Textures/Diamond.png" id="3_7d6ag"]
+[ext_resource type="Script" path="res://Scripts/Target.gd" id="4_vj2o1"]
+[ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="5_vy201"]
 
-[sub_resource type="Shader" id="Shader_2xp17"]
+[sub_resource type="Shader" id="Shader_c4v6f"]
 code = "/*
 Shader from Godot Shaders - the free shader library.
 godotshaders.com/shader/energy-beams
@@ -121,8 +121,8 @@ void fragment()
 	COLOR = beam;
 }"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ijkt7"]
-shader = SubResource("Shader_2xp17")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l04tk"]
+shader = SubResource("Shader_c4v6f")
 shader_parameter/beams = 4
 shader_parameter/energy = 3.0
 shader_parameter/roughness = 3
@@ -140,8 +140,8 @@ shader_parameter/y_offset = 0.0
 shader_parameter/fixed_edge_size = 0.213
 shader_parameter/noise_scale = Vector2(1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_t0wsq"]
-shader = SubResource("Shader_2xp17")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tamvd"]
+shader = SubResource("Shader_c4v6f")
 shader_parameter/beams = 4
 shader_parameter/energy = 3.0
 shader_parameter/roughness = 3
@@ -159,8 +159,8 @@ shader_parameter/y_offset = 0.0
 shader_parameter/fixed_edge_size = 0.213
 shader_parameter/noise_scale = Vector2(1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4okmn"]
-shader = SubResource("Shader_2xp17")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ko05"]
+shader = SubResource("Shader_c4v6f")
 shader_parameter/beams = 4
 shader_parameter/energy = 3.0
 shader_parameter/roughness = 3
@@ -178,8 +178,8 @@ shader_parameter/y_offset = 0.0
 shader_parameter/fixed_edge_size = 0.213
 shader_parameter/noise_scale = Vector2(1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tltpw"]
-shader = SubResource("Shader_2xp17")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gir3s"]
+shader = SubResource("Shader_c4v6f")
 shader_parameter/beams = 4
 shader_parameter/energy = 3.0
 shader_parameter/roughness = 3
@@ -197,8 +197,8 @@ shader_parameter/y_offset = 0.0
 shader_parameter/fixed_edge_size = 0.213
 shader_parameter/noise_scale = Vector2(1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qblsa"]
-shader = SubResource("Shader_2xp17")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_djk7h"]
+shader = SubResource("Shader_c4v6f")
 shader_parameter/beams = 4
 shader_parameter/energy = 3.0
 shader_parameter/roughness = 3
@@ -216,8 +216,8 @@ shader_parameter/y_offset = 0.0
 shader_parameter/fixed_edge_size = 0.213
 shader_parameter/noise_scale = Vector2(1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7isbi"]
-shader = SubResource("Shader_2xp17")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ys4ct"]
+shader = SubResource("Shader_c4v6f")
 shader_parameter/beams = 4
 shader_parameter/energy = 3.0
 shader_parameter/roughness = 3
@@ -235,8 +235,8 @@ shader_parameter/y_offset = 0.0
 shader_parameter/fixed_edge_size = 0.213
 shader_parameter/noise_scale = Vector2(1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7jis5"]
-shader = SubResource("Shader_2xp17")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i3skn"]
+shader = SubResource("Shader_c4v6f")
 shader_parameter/beams = 4
 shader_parameter/energy = 3.0
 shader_parameter/roughness = 3
@@ -254,8 +254,8 @@ shader_parameter/y_offset = 0.0
 shader_parameter/fixed_edge_size = 0.213
 shader_parameter/noise_scale = Vector2(1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xwbb4"]
-shader = SubResource("Shader_2xp17")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0tpuf"]
+shader = SubResource("Shader_c4v6f")
 shader_parameter/beams = 4
 shader_parameter/energy = 3.0
 shader_parameter/roughness = 3
@@ -280,15 +280,16 @@ radius = 121.399
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_itrs2")
-bpm = 150.0
+script = ExtResource("1_i2rip")
+bpm = 138.0
+offset = 0.0
 JSON_PATH = "res://Songs/JSON/Gravity.json"
-song_to_load = ExtResource("2_56bfv")
+song_to_load = ExtResource("2_8ihhk")
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Beam" type="ColorRect" parent="Node2D"]
-material = SubResource("ShaderMaterial_ijkt7")
+material = SubResource("ShaderMaterial_l04tk")
 offset_left = 348.0
 offset_top = 1121.0
 offset_right = 1554.0
@@ -297,7 +298,7 @@ rotation = -1.57079
 color = Color(0, 0, 0, 1)
 
 [node name="Beam2" type="ColorRect" parent="Node2D"]
-material = SubResource("ShaderMaterial_t0wsq")
+material = SubResource("ShaderMaterial_tamvd")
 offset_left = 540.0
 offset_top = 1121.0
 offset_right = 1746.0
@@ -306,7 +307,7 @@ rotation = -1.57079
 color = Color(0, 0, 0, 1)
 
 [node name="Beam3" type="ColorRect" parent="Node2D"]
-material = SubResource("ShaderMaterial_4okmn")
+material = SubResource("ShaderMaterial_6ko05")
 offset_left = 732.0
 offset_top = 1121.0
 offset_right = 1938.0
@@ -315,7 +316,7 @@ rotation = -1.57079
 color = Color(0, 0, 0, 1)
 
 [node name="Beam4" type="ColorRect" parent="Node2D"]
-material = SubResource("ShaderMaterial_tltpw")
+material = SubResource("ShaderMaterial_gir3s")
 offset_left = 924.0
 offset_top = 1121.0
 offset_right = 2130.0
@@ -324,7 +325,7 @@ rotation = -1.57079
 color = Color(0, 0, 0, 1)
 
 [node name="Beam5" type="ColorRect" parent="Node2D"]
-material = SubResource("ShaderMaterial_qblsa")
+material = SubResource("ShaderMaterial_djk7h")
 offset_left = 1113.0
 offset_top = 1121.0
 offset_right = 2319.0
@@ -333,7 +334,7 @@ rotation = -1.57079
 color = Color(0, 0, 0, 1)
 
 [node name="Beam6" type="ColorRect" parent="Node2D"]
-material = SubResource("ShaderMaterial_7isbi")
+material = SubResource("ShaderMaterial_ys4ct")
 offset_left = 1307.0
 offset_top = 1121.0
 offset_right = 2513.0
@@ -342,7 +343,7 @@ rotation = -1.57079
 color = Color(0, 0, 0, 1)
 
 [node name="Beam7" type="ColorRect" parent="Node2D"]
-material = SubResource("ShaderMaterial_7jis5")
+material = SubResource("ShaderMaterial_i3skn")
 offset_left = 1501.0
 offset_top = 1121.0
 offset_right = 2707.0
@@ -351,7 +352,7 @@ rotation = -1.57079
 color = Color(0, 0, 0, 1)
 
 [node name="Beam8" type="ColorRect" parent="Node2D"]
-material = SubResource("ShaderMaterial_xwbb4")
+material = SubResource("ShaderMaterial_0tpuf")
 offset_left = 1693.0
 offset_top = 1121.0
 offset_right = 2902.0
@@ -373,9 +374,10 @@ volume_db = -8.0
 modulate = Color(1, 0, 0, 1)
 position = Vector2(421, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_vnnmm")
-script = ExtResource("4_kaadn")
+texture = ExtResource("3_7d6ag")
+script = ExtResource("4_vj2o1")
 key = "a"
+high_key = "q"
 music = NodePath("../Music")
 
 [node name="Area2D" type="Area2D" parent="Diamond1"]
@@ -391,7 +393,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_vnnmm")
+texture = ExtResource("3_7d6ag")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -403,9 +405,10 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(1, 0.466667, 0, 1)
 position = Vector2(613, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_vnnmm")
-script = ExtResource("4_kaadn")
+texture = ExtResource("3_7d6ag")
+script = ExtResource("4_vj2o1")
 key = "s"
+high_key = "w"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
 
@@ -422,7 +425,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_vnnmm")
+texture = ExtResource("3_7d6ag")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -434,9 +437,10 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(1, 1, 0, 1)
 position = Vector2(805, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_vnnmm")
-script = ExtResource("4_kaadn")
+texture = ExtResource("3_7d6ag")
+script = ExtResource("4_vj2o1")
 key = "d"
+high_key = "e"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
 
@@ -453,7 +457,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_vnnmm")
+texture = ExtResource("3_7d6ag")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -465,9 +469,10 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0, 1, 0, 1)
 position = Vector2(997, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_vnnmm")
-script = ExtResource("4_kaadn")
+texture = ExtResource("3_7d6ag")
+script = ExtResource("4_vj2o1")
 key = "f"
+high_key = "r"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
 
@@ -484,7 +489,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_vnnmm")
+texture = ExtResource("3_7d6ag")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -496,9 +501,10 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0, 1, 1, 1)
 position = Vector2(1189, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_vnnmm")
-script = ExtResource("4_kaadn")
+texture = ExtResource("3_7d6ag")
+script = ExtResource("4_vj2o1")
 key = "j"
+high_key = "u"
 music = NodePath("../Music")
 
 [node name="Area2D" type="Area2D" parent="Diamond5"]
@@ -514,7 +520,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_vnnmm")
+texture = ExtResource("3_7d6ag")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -526,9 +532,10 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0.329412, 0.529412, 1, 1)
 position = Vector2(1381, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_vnnmm")
-script = ExtResource("4_kaadn")
+texture = ExtResource("3_7d6ag")
+script = ExtResource("4_vj2o1")
 key = "k"
+high_key = "i"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
 
@@ -545,7 +552,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_vnnmm")
+texture = ExtResource("3_7d6ag")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -557,9 +564,10 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0.556863, 0, 1, 1)
 position = Vector2(1573, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_vnnmm")
-script = ExtResource("4_kaadn")
+texture = ExtResource("3_7d6ag")
+script = ExtResource("4_vj2o1")
 key = "l"
+high_key = "o"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
 
@@ -576,7 +584,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_vnnmm")
+texture = ExtResource("3_7d6ag")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -588,9 +596,10 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(1, 0, 1, 1)
 position = Vector2(1765, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_vnnmm")
-script = ExtResource("4_kaadn")
+texture = ExtResource("3_7d6ag")
+script = ExtResource("4_vj2o1")
 key = ";"
+high_key = "p"
 music = NodePath("../Music")
 metadata/_edit_group_ = true
 
@@ -607,7 +616,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_vnnmm")
+texture = ExtResource("3_7d6ag")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -669,7 +678,7 @@ offset_right = 275.0
 offset_bottom = 104.0
 theme_override_font_sizes/font_size = 48
 text = "SCORE: 0"
-script = ExtResource("5_yu2h2")
+script = ExtResource("5_vy201")
 
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="area_entered" from="Diamond1/Area2D" to="." method="_on_area_2d_area_entered"]

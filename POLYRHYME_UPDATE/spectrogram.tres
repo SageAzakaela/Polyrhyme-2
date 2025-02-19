@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://86pdc17rxql3"]
 
-[ext_resource type="Shader" path="res://Scenes/Charter.gdshader" id="1_yv7nw"]
+[ext_resource type="Shader" path="res://Scripts/Charter.gdshader" id="1_yv7nw"]
 
 [sub_resource type="Gradient" id="Gradient_awqgy"]
 colors = PackedColorArray(0, 0.966667, 1, 1, 1, 0, 1, 1)

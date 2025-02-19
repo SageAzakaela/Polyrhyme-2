@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cm4wku7sd1ve3"
+path="res://.godot/imported/Azakaela - aexplosivé - 05 the living flame_138bpm.ogg-b5a90be53873762c3de1c19e21c9d327.oggvorbisstr"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - aexplosivé - 05 the living flame_138bpm.ogg"
+dest_files=["res://.godot/imported/Azakaela - aexplosivé - 05 the living flame_138bpm.ogg-b5a90be53873762c3de1c19e21c9d327.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
