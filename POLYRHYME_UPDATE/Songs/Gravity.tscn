@@ -1,10 +1,10 @@
 [gd_scene load_steps=17 format=3]
 
-[ext_resource type="Script" path="res://Scripts/Song.gd" id="1_i2rip"]
-[ext_resource type="AudioStream" path="res://MusicAssets/Azakaela - Comet Crashin - 05 Gravity_144bpm.ogg" id="2_8ihhk"]
-[ext_resource type="Texture2D" path="res://Textures/Diamond.png" id="3_7d6ag"]
-[ext_resource type="Script" path="res://Scripts/Target.gd" id="4_vj2o1"]
-[ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="5_vy201"]
+[ext_resource type="Script" path="res://Scripts/Song.gd" id="1_0m6b1"]
+[ext_resource type="AudioStream" path="res://MusicAssets/Azakaela - Comet Crashin - 05 Gravity_144bpm.ogg" id="2_ajqr1"]
+[ext_resource type="Texture2D" path="res://Textures/Diamond.png" id="3_m1h4f"]
+[ext_resource type="Script" path="res://Scripts/Target.gd" id="4_ntw47"]
+[ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="5_k3gee"]
 
 [sub_resource type="Shader" id="Shader_c4v6f"]
 code = "/*
@@ -280,11 +280,11 @@ radius = 121.399
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_i2rip")
-bpm = 138.0
+script = ExtResource("1_0m6b1")
+bpm = 144.0
 offset = 0.0
 JSON_PATH = "res://Songs/JSON/Gravity.json"
-song_to_load = ExtResource("2_8ihhk")
+song_to_load = ExtResource("2_ajqr1")
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -374,8 +374,8 @@ volume_db = -8.0
 modulate = Color(1, 0, 0, 1)
 position = Vector2(421, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_7d6ag")
-script = ExtResource("4_vj2o1")
+texture = ExtResource("3_m1h4f")
+script = ExtResource("4_ntw47")
 key = "a"
 high_key = "q"
 music = NodePath("../Music")
@@ -393,7 +393,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_7d6ag")
+texture = ExtResource("3_m1h4f")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -405,8 +405,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(1, 0.466667, 0, 1)
 position = Vector2(613, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_7d6ag")
-script = ExtResource("4_vj2o1")
+texture = ExtResource("3_m1h4f")
+script = ExtResource("4_ntw47")
 key = "s"
 high_key = "w"
 music = NodePath("../Music")
@@ -425,7 +425,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_7d6ag")
+texture = ExtResource("3_m1h4f")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -437,8 +437,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(1, 1, 0, 1)
 position = Vector2(805, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_7d6ag")
-script = ExtResource("4_vj2o1")
+texture = ExtResource("3_m1h4f")
+script = ExtResource("4_ntw47")
 key = "d"
 high_key = "e"
 music = NodePath("../Music")
@@ -457,7 +457,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_7d6ag")
+texture = ExtResource("3_m1h4f")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -469,8 +469,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0, 1, 0, 1)
 position = Vector2(997, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_7d6ag")
-script = ExtResource("4_vj2o1")
+texture = ExtResource("3_m1h4f")
+script = ExtResource("4_ntw47")
 key = "f"
 high_key = "r"
 music = NodePath("../Music")
@@ -489,7 +489,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_7d6ag")
+texture = ExtResource("3_m1h4f")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -501,8 +501,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0, 1, 1, 1)
 position = Vector2(1189, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_7d6ag")
-script = ExtResource("4_vj2o1")
+texture = ExtResource("3_m1h4f")
+script = ExtResource("4_ntw47")
 key = "j"
 high_key = "u"
 music = NodePath("../Music")
@@ -520,7 +520,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_7d6ag")
+texture = ExtResource("3_m1h4f")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -532,8 +532,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0.329412, 0.529412, 1, 1)
 position = Vector2(1381, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_7d6ag")
-script = ExtResource("4_vj2o1")
+texture = ExtResource("3_m1h4f")
+script = ExtResource("4_ntw47")
 key = "k"
 high_key = "i"
 music = NodePath("../Music")
@@ -552,7 +552,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_7d6ag")
+texture = ExtResource("3_m1h4f")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -564,8 +564,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0.556863, 0, 1, 1)
 position = Vector2(1573, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_7d6ag")
-script = ExtResource("4_vj2o1")
+texture = ExtResource("3_m1h4f")
+script = ExtResource("4_ntw47")
 key = "l"
 high_key = "o"
 music = NodePath("../Music")
@@ -584,7 +584,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_7d6ag")
+texture = ExtResource("3_m1h4f")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -596,8 +596,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(1, 0, 1, 1)
 position = Vector2(1765, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_7d6ag")
-script = ExtResource("4_vj2o1")
+texture = ExtResource("3_m1h4f")
+script = ExtResource("4_ntw47")
 key = ";"
 high_key = "p"
 music = NodePath("../Music")
@@ -616,7 +616,7 @@ lifetime = 0.1
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("3_7d6ag")
+texture = ExtResource("3_m1h4f")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -678,7 +678,7 @@ offset_right = 275.0
 offset_bottom = 104.0
 theme_override_font_sizes/font_size = 48
 text = "SCORE: 0"
-script = ExtResource("5_vy201")
+script = ExtResource("5_k3gee")
 
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="area_entered" from="Diamond1/Area2D" to="." method="_on_area_2d_area_entered"]
