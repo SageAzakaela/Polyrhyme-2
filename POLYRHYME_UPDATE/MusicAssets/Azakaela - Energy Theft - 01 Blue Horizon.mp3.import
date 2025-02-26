@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c032hrcdaw1wk"
+path="res://.godot/imported/Azakaela - Energy Theft - 01 Blue Horizon.mp3-86eee748eab792c1a0c3a54143ea273f.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - Energy Theft - 01 Blue Horizon.mp3"
+dest_files=["res://.godot/imported/Azakaela - Energy Theft - 01 Blue Horizon.mp3-86eee748eab792c1a0c3a54143ea273f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

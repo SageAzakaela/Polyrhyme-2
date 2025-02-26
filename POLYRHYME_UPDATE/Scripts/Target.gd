@@ -33,6 +33,7 @@ func get_input():
 				$GPUParticles2D.emitting = false
 				$GPUParticles2D.emitting = true
 
+
 func note_in_hitbox() -> bool:
 	# Check if note is within the hitbox area (this could be more sophisticated if necessary)
 	return true  # Assuming note is within hitbox; you can refine this check

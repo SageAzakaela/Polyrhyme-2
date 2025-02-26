@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7no75auvi2en"
+path="res://.godot/imported/Azakaela - Elemental Dungeons - 05 Temple of Ice.mp3-7ccce8892593f6174a151947455554f8.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - Elemental Dungeons - 05 Temple of Ice.mp3"
+dest_files=["res://.godot/imported/Azakaela - Elemental Dungeons - 05 Temple of Ice.mp3-7ccce8892593f6174a151947455554f8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

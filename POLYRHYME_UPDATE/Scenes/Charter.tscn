@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/ChartContainer.gd" id="1_2tswj"]
 [ext_resource type="Script" path="res://Scripts/SongTransport.gd" id="2_3ohat"]
-[ext_resource type="AudioStream" uid="uid://bj58jegmqa8np" path="res://MusicAssets/Azakaela - Comet Crashin - 05 Gravity_144bpm.ogg" id="2_c0tty"]
+[ext_resource type="AudioStream" uid="uid://g2d8cl08bklp" path="res://MusicAssets/Azakaela - Mega Moonlight Mania - 06 Syper.mp3" id="2_vqbt2"]
 [ext_resource type="PackedScene" uid="uid://b1gwhusg44k7b" path="res://Scenes/Menu/Menu.tscn" id="3_62mlw"]
 [ext_resource type="Script" path="res://Scripts/TRACK_EDITOR.gd" id="4_8tqdd"]
 [ext_resource type="Script" path="res://resources/track.gd" id="6_85mo5"]
@@ -56,9 +56,9 @@ anchor_bottom = 0.955555
 theme_override_styles/panel = SubResource("StyleBoxFlat_6e8bg")
 follow_focus = true
 script = ExtResource("1_2tswj")
-bpm = 144.0
-default_file_name = "Gravity"
-song_to_play = ExtResource("2_c0tty")
+bpm = 140.0
+default_file_name = "Syper"
+song_to_play = ExtResource("2_vqbt2")
 
 [node name="VboxContainer" type="VBoxContainer" parent="ChartContainer"]
 layout_mode = 2
@@ -69,18 +69,20 @@ theme_override_constants/separation = 0
 [node name="SongTransport" type="VSlider" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.233333
-anchor_top = 0.0675927
-anchor_right = 0.233333
-anchor_bottom = 0.0675927
-offset_left = 16.0024
-offset_top = 959.0
-offset_right = 32.0024
-offset_bottom = 1918.0
+anchor_left = 0.216664
+anchor_top = 0.0666668
+anchor_right = 0.216664
+anchor_bottom = 0.0666668
+offset_left = 40.0043
+offset_top = 960.0
+offset_right = 80.0043
+offset_bottom = 1920.0
+grow_horizontal = 2
+grow_vertical = 2
 rotation = 3.14159
 ticks_on_borders = true
 script = ExtResource("2_3ohat")
-bpm = 144.0
+bpm = 140.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Save_JSON_File" type="Button" parent="."]

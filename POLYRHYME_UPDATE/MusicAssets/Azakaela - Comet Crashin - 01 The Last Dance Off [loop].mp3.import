@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d34cm6a4b4qb5"
+path="res://.godot/imported/Azakaela - Comet Crashin - 01 The Last Dance Off [loop].mp3-ff61b52c92a4a392efc4f91f89699146.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - Comet Crashin - 01 The Last Dance Off [loop].mp3"
+dest_files=["res://.godot/imported/Azakaela - Comet Crashin - 01 The Last Dance Off [loop].mp3-ff61b52c92a4a392efc4f91f89699146.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

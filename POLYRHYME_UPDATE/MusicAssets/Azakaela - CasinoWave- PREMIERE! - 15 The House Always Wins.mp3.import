@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvxjv1apecc72"
+path="res://.godot/imported/Azakaela - CasinoWave- PREMIERE! - 15 The House Always Wins.mp3-e6183570cc0ca1edc74a7ab43773875f.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - CasinoWave- PREMIERE! - 15 The House Always Wins.mp3"
+dest_files=["res://.godot/imported/Azakaela - CasinoWave- PREMIERE! - 15 The House Always Wins.mp3-e6183570cc0ca1edc74a7ab43773875f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

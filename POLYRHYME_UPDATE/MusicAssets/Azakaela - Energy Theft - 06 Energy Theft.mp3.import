@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhei5gbjp6otf"
+path="res://.godot/imported/Azakaela - Energy Theft - 06 Energy Theft.mp3-fa088a0e84231d75ab4a9b49ebcf842b.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - Energy Theft - 06 Energy Theft.mp3"
+dest_files=["res://.godot/imported/Azakaela - Energy Theft - 06 Energy Theft.mp3-fa088a0e84231d75ab4a9b49ebcf842b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

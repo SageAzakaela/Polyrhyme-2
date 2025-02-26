@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bonohg7kl1n8c"
+path="res://.godot/imported/Azakaela - Elemental Dungeons - 06 Temple of Water.mp3-07644e8af3b2c092e9a2e9612cf43894.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - Elemental Dungeons - 06 Temple of Water.mp3"
+dest_files=["res://.godot/imported/Azakaela - Elemental Dungeons - 06 Temple of Water.mp3-07644e8af3b2c092e9a2e9612cf43894.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3gppdlcx5mkp"
+path="res://.godot/imported/Azakaela - The Crown of Poison Flower - 08 Imven-Xogri'eykrith-vez.mp3-a11546d85e2211cd3d377b6c07834e83.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - The Crown of Poison Flower - 08 Imven-Xogri'eykrith-vez.mp3"
+dest_files=["res://.godot/imported/Azakaela - The Crown of Poison Flower - 08 Imven-Xogri'eykrith-vez.mp3-a11546d85e2211cd3d377b6c07834e83.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

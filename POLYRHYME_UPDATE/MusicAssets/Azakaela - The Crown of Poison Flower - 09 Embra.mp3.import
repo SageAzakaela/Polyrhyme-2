@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dow6w41y8hi53"
+path="res://.godot/imported/Azakaela - The Crown of Poison Flower - 09 Embra.mp3-d869ec6a5d8ff0a30b29b34dc3611877.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - The Crown of Poison Flower - 09 Embra.mp3"
+dest_files=["res://.godot/imported/Azakaela - The Crown of Poison Flower - 09 Embra.mp3-d869ec6a5d8ff0a30b29b34dc3611877.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

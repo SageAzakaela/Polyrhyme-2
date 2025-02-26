@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dct17qmh11tdy"
+path="res://.godot/imported/Azakaela - Comet Crashin - 07 Here It Comes.mp3-162e992c36a4f447e51be46a7046407e.mp3str"
+
+[deps]
+
+source_file="res://MusicAssets/Azakaela - Comet Crashin - 07 Here It Comes.mp3"
+dest_files=["res://.godot/imported/Azakaela - Comet Crashin - 07 Here It Comes.mp3-162e992c36a4f447e51be46a7046407e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

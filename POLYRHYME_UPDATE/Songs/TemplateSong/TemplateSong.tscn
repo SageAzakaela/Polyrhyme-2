@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://266y8qq0daty"]
+[gd_scene load_steps=25 format=3 uid="uid://266y8qq0daty"]
 
 [ext_resource type="Script" path="res://Scripts/Song.gd" id="1_nxx6l"]
+[ext_resource type="Shader" path="res://Scripts/BackgroundShader.gdshader" id="2_ga4oy"]
 [ext_resource type="Texture2D" uid="uid://xv73iswtxltc" path="res://Textures/Diamond.png" id="2_y6mom"]
 [ext_resource type="Script" path="res://Scripts/Target.gd" id="3_0jhd0"]
 [ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="4_t2gxa"]
@@ -139,6 +140,44 @@ shader_parameter/y_offset = 0.0
 shader_parameter/fixed_edge_size = 0.213
 shader_parameter/noise_scale = Vector2(1, 1)
 
+[sub_resource type="Animation" id="Animation_ifk7h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/outline_thickness")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.1]
+}
+
+[sub_resource type="Animation" id="Animation_jqllf"]
+resource_name = "grow"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/outline_thickness")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.1, 0.038]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_djx8p"]
+_data = {
+"RESET": SubResource("Animation_ifk7h"),
+"grow": SubResource("Animation_jqllf")
+}
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tamvd"]
 shader = SubResource("Shader_c4v6f")
 shader_parameter/beams = 4
@@ -272,11 +311,87 @@ shader_parameter/y_offset = 0.0
 shader_parameter/fixed_edge_size = 0.213
 shader_parameter/noise_scale = Vector2(1, 1)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n0cen"]
+shader = ExtResource("2_ga4oy")
+shader_parameter/zoom = 0.6
+shader_parameter/rotate_speed = 0.1
+shader_parameter/disp = Vector2(0.5, 0.5)
+shader_parameter/transparent = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ktxhk"]
+shader = ExtResource("2_ga4oy")
+shader_parameter/zoom = 0.6
+shader_parameter/rotate_speed = -0.0999999
+shader_parameter/disp = Vector2(0.5, 0.5)
+shader_parameter/transparent = true
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_nhexy"]
 radius = 121.399
 
 [sub_resource type="Gradient" id="Gradient_ajob7"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_3g25x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.9, 0.9)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ms6wr"]
+resource_name = "zoom"
+length = 24.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 12.5),
+"transitions": PackedFloat32Array(0.594604, 0.840895),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 8.2, 16, 24),
+"transitions": PackedFloat32Array(0.554785, 0.554785, 0.554785, 0.554785),
+"update": 0,
+"values": [0.0, -0.00872665, 0.00872665, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7hokg"]
+_data = {
+"RESET": SubResource("Animation_3g25x"),
+"zoom": SubResource("Animation_ms6wr")
+}
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxx6l")
@@ -287,80 +402,144 @@ JSON_PATH = "res://Songs/JSON/Electric River.json"
 [node name="Beam" type="ColorRect" parent="Node2D"]
 material = SubResource("ShaderMaterial_l04tk")
 offset_left = 348.0
-offset_top = 1121.0
-offset_right = 1554.0
-offset_bottom = 1268.0
+offset_top = 1247.0
+offset_right = 1728.0
+offset_bottom = 1394.0
 rotation = -1.57079
 color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Beam"]
+libraries = {
+"": SubResource("AnimationLibrary_djx8p")
+}
+autoplay = "grow"
 
 [node name="Beam2" type="ColorRect" parent="Node2D"]
 material = SubResource("ShaderMaterial_tamvd")
 offset_left = 540.0
-offset_top = 1121.0
-offset_right = 1746.0
-offset_bottom = 1268.0
+offset_top = 1247.0
+offset_right = 1920.0
+offset_bottom = 1394.0
 rotation = -1.57079
 color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Beam2"]
+libraries = {
+"": SubResource("AnimationLibrary_djx8p")
+}
+autoplay = "grow"
 
 [node name="Beam3" type="ColorRect" parent="Node2D"]
 material = SubResource("ShaderMaterial_6ko05")
 offset_left = 732.0
-offset_top = 1121.0
-offset_right = 1938.0
-offset_bottom = 1268.0
+offset_top = 1247.0
+offset_right = 2112.0
+offset_bottom = 1394.0
 rotation = -1.57079
 color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Beam3"]
+libraries = {
+"": SubResource("AnimationLibrary_djx8p")
+}
+autoplay = "grow"
 
 [node name="Beam4" type="ColorRect" parent="Node2D"]
 material = SubResource("ShaderMaterial_gir3s")
 offset_left = 924.0
-offset_top = 1121.0
-offset_right = 2130.0
-offset_bottom = 1268.0
+offset_top = 1247.0
+offset_right = 2304.0
+offset_bottom = 1394.0
 rotation = -1.57079
 color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Beam4"]
+libraries = {
+"": SubResource("AnimationLibrary_djx8p")
+}
+autoplay = "grow"
 
 [node name="Beam5" type="ColorRect" parent="Node2D"]
 material = SubResource("ShaderMaterial_djk7h")
 offset_left = 1113.0
-offset_top = 1121.0
-offset_right = 2319.0
-offset_bottom = 1268.0
+offset_top = 1247.0
+offset_right = 2493.0
+offset_bottom = 1394.0
 rotation = -1.57079
 color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Beam5"]
+libraries = {
+"": SubResource("AnimationLibrary_djx8p")
+}
+autoplay = "grow"
 
 [node name="Beam6" type="ColorRect" parent="Node2D"]
 material = SubResource("ShaderMaterial_ys4ct")
 offset_left = 1307.0
-offset_top = 1121.0
-offset_right = 2513.0
-offset_bottom = 1268.0
+offset_top = 1247.0
+offset_right = 2687.0
+offset_bottom = 1394.0
 rotation = -1.57079
 color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Beam6"]
+libraries = {
+"": SubResource("AnimationLibrary_djx8p")
+}
+autoplay = "grow"
 
 [node name="Beam7" type="ColorRect" parent="Node2D"]
 material = SubResource("ShaderMaterial_i3skn")
 offset_left = 1501.0
-offset_top = 1121.0
-offset_right = 2707.0
-offset_bottom = 1268.0
+offset_top = 1247.0
+offset_right = 2881.0
+offset_bottom = 1394.0
 rotation = -1.57079
 color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Beam7"]
+libraries = {
+"": SubResource("AnimationLibrary_djx8p")
+}
+autoplay = "grow"
 
 [node name="Beam8" type="ColorRect" parent="Node2D"]
 material = SubResource("ShaderMaterial_0tpuf")
 offset_left = 1693.0
-offset_top = 1121.0
-offset_right = 2902.0
-offset_bottom = 1268.0
+offset_top = 1247.0
+offset_right = 3073.0
+offset_bottom = 1394.0
 rotation = -1.57079
 color = Color(0, 0, 0, 1)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Beam8"]
+libraries = {
+"": SubResource("AnimationLibrary_djx8p")
+}
+autoplay = "grow"
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D"]
+offset_left = -232.0
+offset_top = -224.0
+offset_right = 2224.0
+offset_bottom = 1344.0
+color = Color(0, 0, 0, 0.517647)
+
 [node name="ColorRect2" type="ColorRect" parent="Node2D"]
-offset_left = -48.0
-offset_top = -48.0
-offset_right = 1936.0
-offset_bottom = 1096.0
+material = SubResource("ShaderMaterial_n0cen")
+offset_left = -232.0
+offset_top = -224.0
+offset_right = 2224.0
+offset_bottom = 1344.0
+color = Color(0, 0, 0, 0.72549)
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D"]
+material = SubResource("ShaderMaterial_ktxhk")
+offset_left = -232.0
+offset_top = -224.0
+offset_right = 2224.0
+offset_bottom = 1344.0
 color = Color(0, 0, 0, 0.72549)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
@@ -385,9 +564,9 @@ shape = SubResource("CircleShape2D_nhexy")
 [node name="GPUParticles2D" type="CPUParticles2D" parent="Diamond1"]
 emitting = false
 amount = 32
-lifetime = 0.1
+lifetime = 0.5
 one_shot = true
-speed_scale = 0.2
+speed_scale = 2.0
 explosiveness = 0.16
 texture = ExtResource("2_y6mom")
 gravity = Vector2(0, -810)
@@ -417,7 +596,7 @@ shape = SubResource("CircleShape2D_nhexy")
 [node name="GPUParticles2D" type="CPUParticles2D" parent="Diamond2"]
 emitting = false
 amount = 32
-lifetime = 0.1
+lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
@@ -449,7 +628,7 @@ shape = SubResource("CircleShape2D_nhexy")
 [node name="GPUParticles2D" type="CPUParticles2D" parent="Diamond3"]
 emitting = false
 amount = 32
-lifetime = 0.1
+lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
@@ -481,7 +660,7 @@ shape = SubResource("CircleShape2D_nhexy")
 [node name="GPUParticles2D" type="CPUParticles2D" parent="Diamond4"]
 emitting = false
 amount = 32
-lifetime = 0.1
+lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
@@ -512,7 +691,7 @@ shape = SubResource("CircleShape2D_nhexy")
 [node name="GPUParticles2D" type="CPUParticles2D" parent="Diamond5"]
 emitting = false
 amount = 32
-lifetime = 0.1
+lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
@@ -544,7 +723,7 @@ shape = SubResource("CircleShape2D_nhexy")
 [node name="GPUParticles2D" type="CPUParticles2D" parent="Diamond6"]
 emitting = false
 amount = 32
-lifetime = 0.1
+lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
@@ -576,7 +755,7 @@ shape = SubResource("CircleShape2D_nhexy")
 [node name="GPUParticles2D" type="CPUParticles2D" parent="Diamond7"]
 emitting = false
 amount = 32
-lifetime = 0.1
+lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
@@ -608,7 +787,7 @@ shape = SubResource("CircleShape2D_nhexy")
 [node name="GPUParticles2D" type="CPUParticles2D" parent="Diamond8"]
 emitting = false
 amount = 32
-lifetime = 0.1
+lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
@@ -675,6 +854,19 @@ offset_bottom = 104.0
 theme_override_font_sizes/font_size = 48
 text = "SCORE: 0"
 script = ExtResource("4_t2gxa")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(968, 544)
+ignore_rotation = false
+zoom = Vector2(0.9, 0.9)
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+libraries = {
+"": SubResource("AnimationLibrary_7hokg")
+}
+autoplay = "zoom"
 
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="area_entered" from="Diamond1/Area2D" to="." method="_on_area_2d_area_entered"]

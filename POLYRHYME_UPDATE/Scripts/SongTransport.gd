@@ -2,6 +2,7 @@ extends VSlider
 
 @onready var song_editor = $"../ChartContainer"
 @export var bpm: float = 120
+
 func _on_drag_ended(_value_changed):
 	# Calculate the time based on the beat
 	var beat_interval = 60.0 / bpm / 4.0

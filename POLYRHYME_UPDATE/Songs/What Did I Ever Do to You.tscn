@@ -1,11 +1,11 @@
 [gd_scene load_steps=26 format=3]
 
-[ext_resource type="Script" path="res://Scripts/Song.gd" id="1_d4uru"]
-[ext_resource type="AudioStream" path="res://MusicAssets/Azakaela - Comet Crashin - 05 Gravity_144bpm.ogg" id="2_ftokx"]
-[ext_resource type="Shader" path="res://Scripts/BackgroundShader.gdshader" id="3_x0ixd"]
-[ext_resource type="Texture2D" path="res://Textures/Diamond.png" id="4_yvx2x"]
-[ext_resource type="Script" path="res://Scripts/Target.gd" id="5_626tx"]
-[ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="6_gcgle"]
+[ext_resource type="Script" path="res://Scripts/Song.gd" id="1_g70to"]
+[ext_resource type="AudioStream" path="res://MusicAssets/Azakaela - What Did I Ever Do to You- (Single) (1).mp3" id="2_yhkle"]
+[ext_resource type="Shader" path="res://Scripts/BackgroundShader.gdshader" id="3_c62jc"]
+[ext_resource type="Texture2D" path="res://Textures/Diamond.png" id="4_ofqy8"]
+[ext_resource type="Script" path="res://Scripts/Target.gd" id="5_gbahb"]
+[ext_resource type="Script" path="res://Scripts/ScoreLabel.gd" id="6_eukqc"]
 
 [sub_resource type="Shader" id="Shader_c4v6f"]
 code = "/*
@@ -313,14 +313,14 @@ shader_parameter/fixed_edge_size = 0.213
 shader_parameter/noise_scale = Vector2(1, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n0cen"]
-shader = ExtResource("3_x0ixd")
+shader = ExtResource("3_c62jc")
 shader_parameter/zoom = 0.6
 shader_parameter/rotate_speed = 0.1
 shader_parameter/disp = Vector2(0.5, 0.5)
 shader_parameter/transparent = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ktxhk"]
-shader = ExtResource("3_x0ixd")
+shader = ExtResource("3_c62jc")
 shader_parameter/zoom = 0.6
 shader_parameter/rotate_speed = -0.0999999
 shader_parameter/disp = Vector2(0.5, 0.5)
@@ -395,11 +395,11 @@ _data = {
 }
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_d4uru")
-bpm = 144.0
+script = ExtResource("1_g70to")
+bpm = 100.0
 offset = 0.0
-JSON_PATH = "res://Songs/JSON/Gravity.json"
-song_to_load = ExtResource("2_ftokx")
+JSON_PATH = "res://Songs/JSON/What Did I Ever Do to You.json"
+song_to_load = ExtResource("2_yhkle")
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -553,8 +553,8 @@ volume_db = -8.0
 modulate = Color(1, 0, 0, 1)
 position = Vector2(421, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("4_yvx2x")
-script = ExtResource("5_626tx")
+texture = ExtResource("4_ofqy8")
+script = ExtResource("5_gbahb")
 key = "a"
 high_key = "q"
 music = NodePath("../Music")
@@ -572,7 +572,7 @@ lifetime = 0.5
 one_shot = true
 speed_scale = 2.0
 explosiveness = 0.16
-texture = ExtResource("4_yvx2x")
+texture = ExtResource("4_ofqy8")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -584,8 +584,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(1, 0.466667, 0, 1)
 position = Vector2(613, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("4_yvx2x")
-script = ExtResource("5_626tx")
+texture = ExtResource("4_ofqy8")
+script = ExtResource("5_gbahb")
 key = "s"
 high_key = "w"
 music = NodePath("../Music")
@@ -604,7 +604,7 @@ lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("4_yvx2x")
+texture = ExtResource("4_ofqy8")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -616,8 +616,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(1, 1, 0, 1)
 position = Vector2(805, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("4_yvx2x")
-script = ExtResource("5_626tx")
+texture = ExtResource("4_ofqy8")
+script = ExtResource("5_gbahb")
 key = "d"
 high_key = "e"
 music = NodePath("../Music")
@@ -636,7 +636,7 @@ lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("4_yvx2x")
+texture = ExtResource("4_ofqy8")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -648,8 +648,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0, 1, 0, 1)
 position = Vector2(997, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("4_yvx2x")
-script = ExtResource("5_626tx")
+texture = ExtResource("4_ofqy8")
+script = ExtResource("5_gbahb")
 key = "f"
 high_key = "r"
 music = NodePath("../Music")
@@ -668,7 +668,7 @@ lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("4_yvx2x")
+texture = ExtResource("4_ofqy8")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -680,8 +680,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0, 1, 1, 1)
 position = Vector2(1189, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("4_yvx2x")
-script = ExtResource("5_626tx")
+texture = ExtResource("4_ofqy8")
+script = ExtResource("5_gbahb")
 key = "j"
 high_key = "u"
 music = NodePath("../Music")
@@ -699,7 +699,7 @@ lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("4_yvx2x")
+texture = ExtResource("4_ofqy8")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -711,8 +711,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0.329412, 0.529412, 1, 1)
 position = Vector2(1381, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("4_yvx2x")
-script = ExtResource("5_626tx")
+texture = ExtResource("4_ofqy8")
+script = ExtResource("5_gbahb")
 key = "k"
 high_key = "i"
 music = NodePath("../Music")
@@ -731,7 +731,7 @@ lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("4_yvx2x")
+texture = ExtResource("4_ofqy8")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -743,8 +743,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(0.556863, 0, 1, 1)
 position = Vector2(1573, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("4_yvx2x")
-script = ExtResource("5_626tx")
+texture = ExtResource("4_ofqy8")
+script = ExtResource("5_gbahb")
 key = "l"
 high_key = "o"
 music = NodePath("../Music")
@@ -763,7 +763,7 @@ lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("4_yvx2x")
+texture = ExtResource("4_ofqy8")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -775,8 +775,8 @@ color_ramp = SubResource("Gradient_ajob7")
 modulate = Color(1, 0, 1, 1)
 position = Vector2(1765, 981)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("4_yvx2x")
-script = ExtResource("5_626tx")
+texture = ExtResource("4_ofqy8")
+script = ExtResource("5_gbahb")
 key = ";"
 high_key = "p"
 music = NodePath("../Music")
@@ -795,7 +795,7 @@ lifetime = 0.5
 one_shot = true
 speed_scale = 0.2
 explosiveness = 0.16
-texture = ExtResource("4_yvx2x")
+texture = ExtResource("4_ofqy8")
 gravity = Vector2(0, -810)
 angular_velocity_min = 334.55
 angular_velocity_max = 625.46
@@ -857,7 +857,7 @@ offset_right = 275.0
 offset_bottom = 104.0
 theme_override_font_sizes/font_size = 48
 text = "SCORE: 0"
-script = ExtResource("6_gcgle")
+script = ExtResource("6_eukqc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(968, 544)
